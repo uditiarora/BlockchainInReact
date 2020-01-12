@@ -25,8 +25,7 @@ class Wallet{
         }
     
         return new Transaction({ senderWallet: this, recipient, amount });
-      }
-    
+      }    
       static calculateBalance({ chain, address }) {
         let hasConductedTransaction = false;
         let outputsTotal = 0;
