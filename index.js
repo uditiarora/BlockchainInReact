@@ -30,7 +30,6 @@ app.post('/api/mine',(req,res) => {
     pubsub.broadcastChain();
     res.redirect('/api/blocks');
 });
-
 app.post('/api/transact',(req,res) => {
     const { amount, recipient } = req.body;
     let transaction = transactionPool.existingTransaction({ inputAddress: wallet.publicKey});
