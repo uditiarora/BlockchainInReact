@@ -1,5 +1,6 @@
 const express = require('express');
 const request = require('request');
+const path = require('path');
 const bodyParser = require('body-parser');
 const Blockchain = require('./blockchain');
 const PubSub = require('./app/pubsub');
@@ -65,6 +66,9 @@ app.get('/api/wallet-info',(req,res)=>{
     });
 });
 
+app.get('*',(req,res) => {
+    res.sendFile(path.join(__dirname,'./client/index.html'));
+});
 const syncWithRootState = () => {
     request({url: `${ROOT_NODE_ADDRESS}/api/blocks`},(error,response,body) => {
         if(!error && response.statusCode === 200){
