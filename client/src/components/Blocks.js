@@ -10,7 +10,7 @@ class Blocks extends Component {
     fetch(`${document.location.origin}/api/blocks/length`)
       .then(response => response.json())
       .then(json => this.setState({ blocksLength: json }));
-
+    
     this.fetchPaginatedBlocks(this.state.paginatedId)();
   }
 
