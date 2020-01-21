@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import Title from './Title';
+import '../css/App.css';
 class App extends Component {
   state = { walletInfo: {} };
 
@@ -15,8 +16,8 @@ class App extends Component {
 
     return (
       <div className='App'>
-        <div>
-          Welcome to the blockchain...
+        <div className="title-container">
+          <Title />
         </div>
         <br />
         <div><Link to='/blocks'>Blocks</Link></div>
