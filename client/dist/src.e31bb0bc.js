@@ -36920,8 +36920,18 @@ function (_Component) {
       return _react.default.createElement("div", {
         className: "App"
       }, _react.default.createElement("div", {
-        className: "title-container"
-      }, _react.default.createElement(_Title.default, null)), _react.default.createElement("br", null), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
+        className: "wrapper"
+      }, _react.default.createElement("div", {
+        className: "main"
+      }, _react.default.createElement("div", {
+        className: "container"
+      }, _react.default.createElement("div", {
+        className: "row"
+      }, _react.default.createElement("div", {
+        className: "col-md-5 col-sm-12 title-container"
+      }, _react.default.createElement(_Title.default, null)), _react.default.createElement("div", {
+        className: "col-md-7 col-sm-12 form-container"
+      }, _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/blocks"
       }, "Blocks")), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/conduct-transaction"
@@ -36929,7 +36939,7 @@ function (_Component) {
         to: "/transaction-pool"
       }, "Transaction Pool")), _react.default.createElement("br", null), _react.default.createElement("div", {
         className: "WalletInfo"
-      }, _react.default.createElement("div", null, "Address: ", address), _react.default.createElement("div", null, "Balance: ", balance)));
+      }, _react.default.createElement("div", null, "Address: ", address), _react.default.createElement("div", null, "Balance: ", balance))))))));
     }
   }]);
 
@@ -51744,7 +51754,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50250" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51491" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

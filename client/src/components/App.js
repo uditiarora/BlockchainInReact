@@ -15,20 +15,30 @@ class App extends Component {
     const { address, balance } = this.state.walletInfo;
 
     return (
-      <div className='App'>
-        <div className="title-container">
-          <Title />
-        </div>
-        <br />
-        <div><Link to='/blocks'>Blocks</Link></div>
-        <div><Link to='/conduct-transaction'>Conduct a Transaction</Link></div>
-        <div><Link to='/transaction-pool'>Transaction Pool</Link></div>
-        <br />
-        <div className='WalletInfo'>
-          <div>Address: {address}</div>
-          <div>Balance: {balance}</div>
+      <div className="App">
+        <div className="wrapper">
+          <div className="main">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-5 col-sm-12 title-container">
+                  <Title />
+                </div>
+                <div className="col-md-7 col-sm-12 form-container">
+                  <div><Link to='/blocks'>Blocks</Link></div>
+                  <div><Link to='/conduct-transaction'>Conduct a Transaction</Link></div>
+                  <div><Link to='/transaction-pool'>Transaction Pool</Link></div>
+                  <br />
+                  <div className='WalletInfo'>
+                    <div>Address: {address}</div>
+                    <div>Balance: {balance}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      
     );
   }
 }
