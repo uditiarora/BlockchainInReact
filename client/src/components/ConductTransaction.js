@@ -37,7 +37,7 @@ class ConductTransaction extends Component {
   render() {
     return (
       <div className='ConductTransaction'>
-        <Link to='/'>Home</Link>
+        <Link to='/'><button class="btn btn-primary">Home</button></Link>
         <h3>Conduct a Transaction</h3>
         <br />
         <h4>Known Addresses</h4>

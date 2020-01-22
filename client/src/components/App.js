@@ -24,13 +24,18 @@ class App extends Component {
                   <Title />
                 </div>
                 <div className="col-md-7 col-sm-12 form-container">
-                  <div><Link to='/blocks'>Blocks</Link></div>
-                  <div><Link to='/conduct-transaction'>Conduct a Transaction</Link></div>
-                  <div><Link to='/transaction-pool'>Transaction Pool</Link></div>
+                  <div><Link to='/blocks'><button className="btn2 btn btn-primary col-md-4">Blocks</button></Link></div>
+                  <div><Link to='/conduct-transaction'><button className="btn2 btn btn-primary col-md-4">Conduct a Transaction</button></Link></div>
+                  <div><Link to='/transaction-pool'><button className="btn2 btn btn-primary col-md-4">Transaction Pool</button></Link></div>
                   <br />
+                  <br />
+                  <br />
+                  <br />
+                  
+                  <hr />
                   <div className='WalletInfo'>
-                    <div>Address: {address}</div>
-                    <div>Balance: {balance}</div>
+                    <div className="col-md-12"><p>Address: {address}</p></div>
+                    <div className="col-md-12"><p>Balance: {balance}</p></div>
                   </div>
                 </div>
               </div>

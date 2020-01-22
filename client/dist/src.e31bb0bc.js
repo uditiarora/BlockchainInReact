@@ -36933,13 +36933,23 @@ function (_Component) {
         className: "col-md-7 col-sm-12 form-container"
       }, _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/blocks"
-      }, "Blocks")), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
+      }, _react.default.createElement("button", {
+        className: "btn2 btn btn-primary col-md-4"
+      }, "Blocks"))), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/conduct-transaction"
-      }, "Conduct a Transaction")), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
+      }, _react.default.createElement("button", {
+        className: "btn2 btn btn-primary col-md-4"
+      }, "Conduct a Transaction"))), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/transaction-pool"
-      }, "Transaction Pool")), _react.default.createElement("br", null), _react.default.createElement("div", {
+      }, _react.default.createElement("button", {
+        className: "btn2 btn btn-primary col-md-4"
+      }, "Transaction Pool"))), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("br", null), _react.default.createElement("hr", null), _react.default.createElement("div", {
         className: "WalletInfo"
-      }, _react.default.createElement("div", null, "Address: ", address), _react.default.createElement("div", null, "Balance: ", balance))))))));
+      }, _react.default.createElement("div", {
+        className: "col-md-12"
+      }, _react.default.createElement("p", null, "Address: ", address)), _react.default.createElement("div", {
+        className: "col-md-12"
+      }, _react.default.createElement("p", null, "Balance: ", balance)))))))));
     }
   }]);
 
@@ -51395,7 +51405,9 @@ function (_Component) {
       console.log('this.state', this.state);
       return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/"
-      }, "Home")), _react.default.createElement("h3", null, "Blocks"), _react.default.createElement("div", null, _toConsumableArray(Array(Math.ceil(this.state.blocksLength / 5)).keys()).map(function (key) {
+      }, _react.default.createElement("button", {
+        "class": "btn btn-primary"
+      }, "Home"))), _react.default.createElement("h3", null, "Blocks"), _react.default.createElement("div", null, _toConsumableArray(Array(Math.ceil(this.state.blocksLength / 5)).keys()).map(function (key) {
         var paginatedId = key + 1;
         return _react.default.createElement("span", {
           key: key,
@@ -51531,7 +51543,9 @@ function (_Component) {
         className: "ConductTransaction"
       }, _react.default.createElement(_reactRouterDom.Link, {
         to: "/"
-      }, "Home"), _react.default.createElement("h3", null, "Conduct a Transaction"), _react.default.createElement("br", null), _react.default.createElement("h4", null, "Known Addresses"), this.state.knownAddresses.map(function (knownAddress) {
+      }, _react.default.createElement("button", {
+        "class": "btn btn-primary"
+      }, "Home")), _react.default.createElement("h3", null, "Conduct a Transaction"), _react.default.createElement("br", null), _react.default.createElement("h4", null, "Known Addresses"), this.state.knownAddresses.map(function (knownAddress) {
         return _react.default.createElement("div", {
           key: knownAddress
         }, _react.default.createElement("div", null, knownAddress), _react.default.createElement("br", null));
@@ -51665,7 +51679,9 @@ function (_Component) {
         className: "TransactionPool"
       }, _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/"
-      }, "Home")), _react.default.createElement("h3", null, "Transaction Pool"), Object.values(this.state.transactionPoolMap).map(function (transaction) {
+      }, _react.default.createElement("button", {
+        "class": "btn btn-primary"
+      }, "Home"))), _react.default.createElement("h3", null, "Transaction Pool"), Object.values(this.state.transactionPoolMap).map(function (transaction) {
         return _react.default.createElement("div", {
           key: transaction.id
         }, _react.default.createElement("hr", null), _react.default.createElement(_Transaction.default, {
@@ -51754,7 +51770,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51491" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52885" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
